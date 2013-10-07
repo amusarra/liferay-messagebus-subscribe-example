@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin-package>
+	<name>liferay-messagebus-subscribe-example</name>
+	<module-id>liferay/liferay-messagebus-subscribe-example/liferay-messagebus-subscribe-example-0.0.1-SNAPSHOT/war</module-id>
+	<types>
+		<type>portlets</type>
+	</types>
+	<tags>
+		<tag>Message BUS</tag>
+		<tag>Email</tag>
+	</tags>
+	<short-description>Liferay Message Bus Subscribe Example Portlet</short-description>
+	<long-description></long-description>
+	<change-log></change-log>
+	<page-url>http://www.dontesta.it</page-url>
+	<author>Antonio Musarra</author>
+	<licenses>
+		<license osi-approved="true">GNU General Public License (GPLv3)</license>
+	</licenses>
+	<liferay-versions>
+		<liferay-version>6.1.1+</liferay-version>
+	</liferay-versions>
+</plugin-package>
