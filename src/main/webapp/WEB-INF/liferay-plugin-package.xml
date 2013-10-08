@@ -9,7 +9,7 @@
 		<tag>Message BUS</tag>
 		<tag>Email</tag>
 	</tags>
-	<short-description>Liferay Message Bus Subscribe Example Portlet</short-description>
+	<short-description>Liferay Message Bus Subscription Sender Example Portlet</short-description>
 	<long-description></long-description>
 	<change-log></change-log>
 	<page-url>http://www.dontesta.it</page-url>

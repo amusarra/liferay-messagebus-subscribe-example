@@ -23,7 +23,7 @@
 <liferay-ui:success key="email-userlist-no-active-send-successfully" message="email-userlist-no-active-send-successfully" />
 <liferay-ui:error key="email-userlist-no-active-count-zero" message="email-userlist-no-active-count-zero" />
 
-This is the <b>liferay-messagebus-subscribe-example</b>.
+This is the <b>Liferay Message Bus-Subscription Sender example</b>.
 
 <aui:form name="<portlet:namespace/>fmSendEmailBySubscriptionSender"
 		action="<%=sendEmailBySubscriptionSender.toString()%>" method="post">
