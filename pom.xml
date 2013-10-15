@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.dontesta.liferay.messagebus.example</groupId>
 	<artifactId>liferay-messagebus-subscribe-example</artifactId>
 	<packaging>war</packaging>
 	<name>Liferay Message Bus Subscription Sender Example Portlet</name>
 	<version>0.0.1-SNAPSHOT</version>
+	<inceptionYear>2013</inceptionYear>
 	<licenses>
 		<license>
 			<name>GNU General Public License (GPLv3)</name>
@@ -26,7 +28,7 @@
 			</roles>
 		</developer>
 	</developers>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -58,7 +60,71 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>1.5</version>
+				<configuration>
+					<verbose>false</verbose>
+				</configuration>
+				<executions>
+					<execution>
+						<id>first</id>
+						<goals>
+							<goal>update-file-header</goal>
+						</goals>
+						<phase>process-sources</phase>
+						<configuration>
+							<licenseName>gpl_v3</licenseName>
+							<encoding>UTF-8</encoding>
+							<addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
+							<includes>
+								<include>main/java/</include>
+								<include>main/webapp/*.jsp</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.mojo
+										</groupId>
+										<artifactId>
+											license-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.5,)
+										</versionRange>
+										<goals>
+											<goal>
+												update-file-header
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 	<dependencies>
 		<dependency>
@@ -111,7 +177,7 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
-		<properties>
+	<properties>
 		<liferay.version>6.1.1</liferay.version>
 		<liferay.auto.deploy.dir>/opt/liferay-portal-6.1.1-ce-ga2/deploy</liferay.auto.deploy.dir>
 		<liferay.app.server.portal.dir>/opt/liferay-portal-6.1.1-ce-ga2/tomcat-7.0.27/webapps/ROOT</liferay.app.server.portal.dir>
@@ -122,5 +188,5 @@
 		<name>Antonio Musarra</name>
 		<url>http://www.dontesta.it</url>
 	</organization>
-	
+
 </project>
